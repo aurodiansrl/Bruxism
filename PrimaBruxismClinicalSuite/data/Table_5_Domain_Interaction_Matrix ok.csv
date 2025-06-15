@@ -1,0 +1,11 @@
+Primary Domain,Secondary Domain,Relationship Type,Notes
+Muscular,Articular,Propagation,Muscular tension can lead to joint overload. Priority to muscular treatment.
+Muscular,Occlusal,Dependency,Occlusal instability may maintain muscle hyperactivity.
+Psychological,Muscular,Modulation,Anxiety can exacerbate muscle tension.
+Psychological,Occlusal,Indirect,Bruxism may not be purely occlusal but stress-related.
+Articular,Muscular,Feedback Loop,Joint dysfunction can perpetuate muscle guarding.
+Articular,Occlusal,Structural,Internal derangements may require occlusal compensation.
+Occlusal,Articular,Aggravation,Malocclusion can stress TMJs.
+Psychological,Articular,Risk Amplifier,Pain catastrophizing may worsen joint symptoms.
+Occlusal,Muscular,Exacerbation,Premature contacts increase muscle activity.
+Psychological,Psychological,Self-loop,Manage with dedicated pathway.

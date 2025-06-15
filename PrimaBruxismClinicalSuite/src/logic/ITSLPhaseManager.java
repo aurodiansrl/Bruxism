@@ -1,0 +1,10 @@
+package logic;
+
+public class ITSLPhaseManager {
+
+    public String getPhase(double fts, int afi) {
+        if (fts > 65 || afi > 65) return "Phase 3";
+        else if (fts > 45 || afi > 25) return "Phase 2";
+        else return "Phase 1";
+    }
+}

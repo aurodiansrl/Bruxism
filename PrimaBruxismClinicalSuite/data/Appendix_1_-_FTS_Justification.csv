@@ -1,0 +1,5 @@
+Domain;Item Count;Total Max Score;FTS Thresholds;Rationale
+Muscular;10;40;0-10=Unlikely, 11-26=Possible, 27+=Probable;Basato su prevalenza sintomi miofasciali e risposte agli item STAB.
+Articular;8;32;0-10=Unlikely, 11-26=Possible, 27+=Probable;Considera segni articolari rilevanti e loro impatto sulla funzione.
+Occlusal;7;28;0-10=Unlikely, 11-26=Possible, 27+=Probable;Valuta interferenze occlusali e correlazioni con parafunzioni.
+Psychological;9;36;0-10=Unlikely, 11-26=Possible, 27+=Probable;Deriva da indici standardizzati (GAD-7, PHQ-9) e stress percepito.

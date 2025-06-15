@@ -1,0 +1,11 @@
+package util;
+
+import model.PatientProfile;
+
+public class ExportManager {
+    public static void exportCurrentReport() {
+        // Placeholder export logic
+        PatientProfile profile = new PatientProfile(1, "Demo", 0.0);
+        System.out.println("Exporting patient: " + profile.getFullName());
+    }
+}

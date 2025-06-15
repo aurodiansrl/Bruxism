@@ -1,0 +1,16 @@
+Domain,Therapy Name,Therapy Type,Description
+Muscular,Biofeedback EMG training,Physical,EMG-based muscle awareness and control training
+Muscular,Occlusal splint (soft or hard),Mechanical,Night guard to reduce muscular load and tooth wear
+Muscular,Manual therapy (myofascial release),Physical,Targeted soft tissue mobilization of masticatory muscles
+Muscular,Muscle relaxants (low dose),Pharmacological,Temporary pharmacological support for muscle tension
+Articular,Stabilization splint,Mechanical,Balanced occlusal appliance to reduce intra-articular stress
+Articular,TMJ mobilization,Physical,Manual mobilization for joint disc and capsule
+Articular,Anti-inflammatory therapy,Pharmacological,NSAIDs or corticosteroids as needed
+Articular,Arthrocentesis or injection (if needed),Invasive,Only in severe persistent joint dysfunction
+Occlusal,Selective grinding (if stable occlusion),Mechanical,Elimination of premature contacts
+Occlusal,Orthodontic referral,Referral,Evaluation for malocclusion contribution
+Occlusal,Digital occlusal reprogramming (e.g., T-Scan),Technological,Adjustments based on occlusal contact time
+Psychological,Cognitive Behavioral Therapy (CBT),Psychological,Focused intervention for stress/anxiety
+Psychological,Sleep hygiene training,Behavioral,Structured habits for restorative sleep
+Psychological,Referral to psychologist or psychiatrist,Referral,If moderate-severe psychopathology is detected
+Psychological,Mindfulness or relaxation therapy,Behavioral,Breathing techniques and progressive relaxation

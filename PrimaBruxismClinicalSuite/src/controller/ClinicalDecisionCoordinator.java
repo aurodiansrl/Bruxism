@@ -1,0 +1,59 @@
+package controller;
+
+import model.*;
+import logic.*;
+import util.*;
+import ui.*;
+import test.*;
+import model.PatientProfile;
+
+public class ClinicalDecisionCoordinator {
+
+    private final MuscularDomainEvaluator muscularEvaluator = new MuscularDomainEvaluator();
+    private final ArticularDomainEvaluator articularEvaluator = new ArticularDomainEvaluator();
+    private final OcclusalDomainEvaluator occlusalEvaluator = new OcclusalDomainEvaluator();
+    private final PsychologicalDomainEvaluator psychologicalEvaluator = new PsychologicalDomainEvaluator();
+    private final PatientDataValidator validator = new PatientDataValidator();
+    private final GDPRConsentManager consentManager = new GDPRConsentManager();
+    private final FTSInterpreter ftsInterpreter = new FTSInterpreter();
+    private final AFIScorer afiScorer = new AFIScorer();
+    private final ITSLPhaseManager phaseManager = new ITSLPhaseManager();
+    private final AFILogicModulator afiModulator = new AFILogicModulator();
+    private final TherapyMatrix therapyMatrix = new TherapyMatrix();
+    private final TherapeuticSequenceEngine sequenceEngine = new TherapeuticSequenceEngine();
+    private final DashboardRenderer dashboard = new DashboardRenderer();
+
+    public void process(PatientProfile profile) {
+        if (!validator.validate(profile)) {
+            System.out.println("Errore: dati paziente non validi.");
+            return;
+        }
+        if (!consentManager.hasConsent(profile)) {
+            System.out.println("Errore: consenso GDPR mancante.");
+            return;
+        }
+
+        double muscularFTS = muscularEvaluator.evaluateMuscularFTS(profile);
+        double articularFTS = articularEvaluator.evaluateArticularFTS(profile);
+        double occlusalFTS = occlusalEvaluator.evaluateOcclusalFTS(profile);
+        double psychFTS = psychologicalEvaluator.evaluatePsychologicalFTS(profile);
+
+        double avgFTS = (muscularFTS + articularFTS + occlusalFTS + psychFTS) / 4.0;
+        String ftsInterpretation = ftsInterpreter.interpretFTS(avgFTS);
+
+        int afiScore = afiScorer.calculateAFI(profile);
+        String itslPhase = phaseManager.getPhase(avgFTS, afiScore);
+        String modulation = afiModulator.adjustStrategy(afiScore);
+        String therapy = therapyMatrix.getRecommendedTherapy("Multidomain", ftsInterpretation);
+
+        sequenceEngine.runSequence("Multidomain", avgFTS, afiScore);
+        dashboard.render();
+
+        System.out.println("\n--- Risultati ---");
+        System.out.println("FTS medio: " + avgFTS + " (" + ftsInterpretation + ")");
+        System.out.println("AFI: " + afiScore);
+        System.out.println("Fase ITSL: " + itslPhase);
+        System.out.println("Modulazione: " + modulation);
+        System.out.println("Terapia raccomandata: " + therapy);
+    }
+}

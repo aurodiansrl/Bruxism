@@ -1,0 +1,14 @@
+Domain,Parameter Code,Parameter Name,Max Score,Type
+Muscular,M1,EMG Night Activity,5,Core Diagnostic
+Muscular,M2,Daytime Clenching Self-report,3,Supportive
+Muscular,M3,Pain on Palpation,4,Core Diagnostic
+Muscular,M4,Muscle Hypertrophy,3,Supportive
+Articular,A1,Joint Noise During Movement,3,Core Diagnostic
+Articular,A2,Joint Deviation or Locking,5,Core Diagnostic
+Articular,A3,Limited Range of Motion,3,Supportive
+Occlusal,O1,Premature Contacts,2,Supportive
+Occlusal,O2,Occlusal Interferences,4,Core Diagnostic
+Occlusal,O3,Crossbite or Malocclusion,3,Supportive
+Psychological,P1,GAD-7 Total Score,7,Core Diagnostic
+Psychological,P2,PHQ-9 Total Score,9,Core Diagnostic
+Psychological,P3,Perceived Stress Score,4,Supportive

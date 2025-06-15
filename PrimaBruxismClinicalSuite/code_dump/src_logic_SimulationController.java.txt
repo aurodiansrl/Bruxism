@@ -1,0 +1,46 @@
+// File: ui/SimulationController.java
+
+package logic;
+
+import model.PatientProfile;
+import model.RiskProfile;
+import util.CSVParser;
+
+import java.io.File;
+
+public class SimulationController {
+
+    public static void runSimulation(File simulationDataFolder) {
+        try {
+            System.out.println("🔁 [Simulation] Loading simulated patient data...");
+
+            // 1. Load patient profile from simulated .csv files
+            PatientProfile patient = CSVParser.loadFullPatientProfile(simulationDataFolder);
+            System.out.println("✅ Patient data loaded: " + patient.getFullName());
+
+            // 2. Run AFI
+            RiskProfile risk = AFICalculator.calculate(patient);
+            System.out.println("🧠 AFI calculated. Level: " + risk.getAfiLevel());
+
+            // 3. Red flag detection
+            risk.setRedFlags(RedFlagDetector.detect(patient));
+
+            // 4. Diagnostic suggestion engine
+            DiagnosticEngine.evaluate(patient, risk);
+
+            // 5. Intra-domain therapeutic logic
+            ITSLSequencer.apply(patient, risk);
+
+            // 6. Therapy planning
+            TherapyPlanner.generate(patient, risk);
+
+            // 7. Show results
+            RiskDisplay.showRiskProfile(risk);
+            TherapyUI.showTherapyPlan(patient.getTreatmentPlan());
+
+        } catch (Exception e) {
+            System.err.println("❌ Simulation failed: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}

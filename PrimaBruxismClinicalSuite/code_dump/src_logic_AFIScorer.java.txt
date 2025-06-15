@@ -1,0 +1,8 @@
+package logic;
+
+public class AFIScorer {
+
+    public int calculateAFI(PatientProfile profile) {
+        return (int)((profile.getSystemicFlags() + profile.getBehavioralFlags()) * 10);
+    }
+}

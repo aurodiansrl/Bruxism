@@ -1,0 +1,13 @@
+package ui;
+
+import model.PatientProfile;
+
+public class TherapyUI {
+    public static void launchPlanner() {
+        System.out.println("Therapy planner launched.");
+    }
+
+    public static void showTherapyPlan(Object plan) {
+        System.out.println("Displaying therapy plan...");
+    }
+}

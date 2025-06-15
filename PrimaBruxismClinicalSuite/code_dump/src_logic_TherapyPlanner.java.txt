@@ -1,0 +1,18 @@
+package logic;
+
+import model.PatientProfile;
+import model.TherapyOption;
+import java.util.List;
+
+public class TherapyPlanner {
+    public static void generate(PatientProfile profile, Object risk) {
+        System.out.println("Therapy plan generated for " + profile.getFullName());
+    }
+
+    public static class DomainInteraction {
+        public String primary;
+        public String secondary;
+        public String relation;
+        public String action;
+    }
+}

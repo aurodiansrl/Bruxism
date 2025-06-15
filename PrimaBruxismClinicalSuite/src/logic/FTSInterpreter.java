@@ -1,0 +1,10 @@
+package logic;
+
+public class FTSInterpreter {
+
+    public String interpretFTS(double score) {
+        if (score <= 25) return "Unlikely";
+        else if (score <= 65) return "Possible";
+        else return "Probable";
+    }
+}

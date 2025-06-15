@@ -1,0 +1,10 @@
+package model;
+
+public class ArticularDomainEvaluator {
+
+    public double evaluateArticularFTS(PatientProfile profile) {
+        double articularScore = profile.getJointNoiseLevel() * 0.5 +
+                                profile.getRangeOfMotionLimit() * 0.5;
+        return articularScore;
+    }
+}

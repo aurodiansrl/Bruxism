@@ -1,0 +1,63 @@
+// File: ui/FTSVisualizer.java
+
+package ui;
+
+import javafx.geometry.Insets;
+import javafx.scene.chart.*;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import model.FTSResult;
+
+public class FTSVisualizer extends VBox {
+
+    public FTSVisualizer(FTSResult ftsResult) {
+        this.setSpacing(12);
+        this.setPadding(new Insets(15));
+        
+        Label title = new Label("FTS Domain Scores");
+        title.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+
+        CategoryAxis xAxis = new CategoryAxis();
+        NumberAxis yAxis = new NumberAxis(0, 100, 10);
+        xAxis.setLabel("Domain");
+        yAxis.setLabel("Score (%)");
+
+        BarChart<String, Number> barChart = new BarChart<>(xAxis, yAxis);
+        barChart.setLegendVisible(false);
+        barChart.setAnimated(false);
+        barChart.setCategoryGap(20);
+        barChart.setBarGap(5);
+
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+
+        series.getData().add(createData("Muscular", ftsResult.getMuscularScore()));
+        series.getData().add(createData("Articular", ftsResult.getArticularScore()));
+        series.getData().add(createData("Occlusal", ftsResult.getOcclusalScore()));
+        series.getData().add(createData("Psychological", ftsResult.getPsychologicalScore()));
+
+        barChart.getData().add(series);
+
+        this.getChildren().addAll(title, barChart);
+    }
+
+    private XYChart.Data<String, Number> createData(String domain, double value) {
+        XYChart.Data<String, Number> data = new XYChart.Data<>(domain, value);
+
+        // Color coding by risk level
+        String color;
+        if (value <= 25) {
+            color = "#a8d5e2"; // Unlikely – light blue
+        } else if (value <= 65) {
+            color = "#f9d976"; // Possible – yellow
+        } else {
+            color = "#f67280"; // Probable – red
+        }
+
+        Rectangle bar = new Rectangle(25, value);
+        bar.setFill(Color.web(color));
+        data.setNode(bar);
+        return data;
+    }
+}

@@ -1,0 +1,11 @@
+Parameter Code,Parameter Name,Domain,Threshold,Core,Notes
+MUSC01,EMG Mean Amplitude,Muscular,40,Yes,Surface EMG in µV
+MUSC02,Pain Palpation Score,Muscular,3,Yes,0–4 scale
+ART01,TMJ Sound Presence,Articular,1,Yes,1 = Present
+ART02,Mouth Opening Range,Articular,38,Yes,Threshold in mm
+OCCL01,Occlusal Interference Contacts,Occlusal,2,Yes,≥2 contacts
+OCCL02,Tooth Wear Index,Occlusal,3,No,On 0–4 index
+PSYC01,STAI-Y Anxiety Index,Psychological,45,Yes,>45 is clinically relevant
+PSYC02,BDI-II Depression Score,Psychological,19,No,Mild depression cut-off
+MUSC03,Bite Force Deviation,Muscular,25,No,In % from baseline
+ART03,Joint Vibration Analysis (JVA),Articular,350,No,Integral value (mvHz)

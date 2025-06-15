@@ -1,0 +1,8 @@
+package test;
+
+public class ClinicalScenarioLoader {
+
+    public void load() {
+        System.out.println("Loading clinical simulation scenario...");
+    }
+}

@@ -1,0 +1,11 @@
+AFI Code,AFI Description,Risk Level,Functional Domain,Notes
+AFI01,Frequent intake of acidic beverages,Moderate,Occlusal,Increases erosion and tooth wear.
+AFI02,Parafunctional habits (e.g., nail biting, gum chewing),Moderate,Muscular,Maintains muscular hyperactivity.
+AFI03,Poor sleep quality or insomnia,High,Psychological,Exacerbates bruxism and muscle tension.
+AFI04,Untreated malocclusion,High,Occlusal,Can alter load distribution on TMJs.
+AFI05,Long-term NSAID use,Moderate,Articular,May mask joint inflammation.
+AFI06,History of TMD,High,Articular,Indicates chronic articular vulnerability.
+AFI07,Elevated perceived stress,High,Psychological,Directly contributes to muscle tone.
+AFI08,GERD or acid reflux,Moderate,Occlusal,Accelerates wear in anterior region.
+AFI09,Bruxism in family history,Low,Psychological,Increases vigilance; not causal.
+AFI10,Use of selective serotonin reuptake inhibitors (SSRIs),High,Muscular,Associated with increased bruxism episodes.

@@ -1,0 +1,10 @@
+package util;
+
+import model.PatientProfile;
+import java.io.File;
+
+public class CSVParser {
+    public static PatientProfile loadFullPatientProfile(File folder) {
+        return new PatientProfile(1, "Sample", 25, 30, 20, 15, 10, 25, 5, 2, 0, true);
+    }
+}

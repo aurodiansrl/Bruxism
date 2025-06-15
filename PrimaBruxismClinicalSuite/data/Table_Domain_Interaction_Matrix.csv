@@ -1,0 +1,9 @@
+Source Domain,Target Domain,Relation Type,Effect,Description
+Muscular,Articular,Propagation,Weak,Disfunzioni muscolari possono influenzare la stabilità articolare.
+Occlusal,Muscular,Propagation,Strong,Occlusione alterata può causare sovraccarico muscolare.
+Articular,Psychological,Propagation,Moderate,Dolore articolare cronico può generare disagio psicologico.
+Psychological,Muscular,Amplification,Strong,Stress acuto può intensificare l’attività muscolare involontaria.
+Psychological,Articular,Amplification,Moderate,L’ansia può peggiorare la percezione del dolore articolare.
+Muscular,Psychological,Feedback Loop,Bidirectional,La tensione muscolare può alimentare l’ansia e viceversa.
+Occlusal,Psychological,No Effect,None,Nessuna influenza diretta riscontrata nella letteratura.
+Articular,Occlusal,Dominance,Override,L’instabilità articolare può rendere inefficace un intervento occlusale.

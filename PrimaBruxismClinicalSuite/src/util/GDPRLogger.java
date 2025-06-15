@@ -1,0 +1,67 @@
+// File: util/GDPRLogger.java
+
+package util;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class GDPRLogger {
+
+    private static final String LOG_DIRECTORY = "gdpr_logs/";
+    private static final String LOG_FILE_NAME = "gdpr_activity.log";
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+    static {
+        // Crea directory log se non esiste
+        FileManager.ensureDirectoryExists(LOG_DIRECTORY);
+    }
+
+    /**
+     * Scrive un evento GDPR nel file di log.
+     */
+    public static void log(String patientId, String level, String message) {
+        String timestamp = LocalDateTime.now().format(formatter);
+        String logEntry = String.format("[%s] [%s] [Patient: %s] %s", timestamp, level.toUpperCase(), patientId, message);
+
+        try (FileWriter writer = new FileWriter(LOG_DIRECTORY + LOG_FILE_NAME, true)) {
+            writer.write(logEntry + System.lineSeparator());
+        } catch (IOException e) {
+            System.err.println("Errore nella scrittura del log GDPR: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Shortcut per log di tipo INFO.
+     */
+    public static void info(String patientId, String message) {
+        log(patientId, "INFO", message);
+    }
+
+    /**
+     * Shortcut per log di tipo ACCESS.
+     */
+    public static void access(String patientId, String message) {
+        log(patientId, "ACCESS", message);
+    }
+
+    /**
+     * Shortcut per log di tipo WARNING.
+     */
+    public static void warning(String patientId, String message) {
+        log(patientId, "WARNING", message);
+    }
+
+    /**
+     * Shortcut per log di tipo ERROR.
+     */
+    public static void error(String patientId, String message) {
+        log(patientId, "ERROR", message);
+    }
+
+    public static void logEvent(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'logEvent'");
+    }
+}

@@ -1,0 +1,9 @@
+package logic;
+
+public class TherapyMatrix {
+
+    public String getRecommendedTherapy(String domain, String severity) {
+        // Placeholder: return therapy suggestion based on domain/severity
+        return "Default therapy for " + domain + " with severity " + severity;
+    }
+}

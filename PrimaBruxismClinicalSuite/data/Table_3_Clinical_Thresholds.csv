@@ -1,0 +1,15 @@
+Instrument Name,Parameter,Threshold Value,IsCoreDiagnostic
+Electromyography (EMG),Masseter RMS (sleep, µV),>20,true
+Electromyography (EMG),Temporalis RMS (wake, µV),>15,true
+Muscle Palpation Test,VAS pain score (0–10),≥4,true
+Mandibular Movement Recording,Maximum Opening (mm),<38,false
+MRI TMJ,Disc Displacement with Reduction,Present,true
+CBCT TMJ,Condylar Resorption or Osteophytes,Present,true
+Joint Sound Analysis,Reciprocal Click or Crepitation,Present,false
+Occlusal Contact Analysis,Premature Contact on Lateral Exc.,Present,true
+T-Scan,Time to Disclusion >0.4s,>0.4,false
+BruxChecker,Excessive Posterior Wear,Present,false
+GAD-7,Total Score,≥10,true
+PHQ-9,Total Score,≥10,true
+PSQI,Global Sleep Score,>5,false
+PSS,Total Score,≥20,false

@@ -1,0 +1,29 @@
+// src/logic/FTSCalculator.java
+package logic;
+
+import patient.PatientProfile;
+import java.util.HashMap;
+import java.util.Map;
+
+public class FTSCalculator {
+
+    private static final double MAX_SCORE_PER_DOMAIN = 40.0;
+
+    public static Map<String, String> calculateFTSLabels(PatientProfile profile) {
+        Map<String, String> result = new HashMap<>();
+
+        for (String domain : profile.getAllDomainScores().keySet()) {
+            double rawScore = profile.getScore(domain);
+            double percentage = (rawScore / MAX_SCORE_PER_DOMAIN) * 100;
+
+            String label;
+            if (percentage <= 25) label = "Unlikely";
+            else if (percentage <= 65) label = "Possible";
+            else label = "Probable";
+
+            result.put(domain, String.format("%.1f%% – %s", percentage, label));
+        }
+
+        return result;
+    }
+}

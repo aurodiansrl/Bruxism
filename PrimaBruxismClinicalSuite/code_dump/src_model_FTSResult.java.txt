@@ -1,0 +1,13 @@
+package model;
+
+public class FTSResult {
+    public double getMuscularScore() { return 25.0; }
+    public double getArticularScore() { return 25.0; }
+    public double getOcclusalScore() { return 25.0; }
+    public double getPsychologicalScore() { return 25.0; }
+
+    public String getMuscularLabel() { return "Low"; }
+    public String getArticularLabel() { return "Medium"; }
+    public String getOcclusalLabel() { return "High"; }
+    public String getPsychologicalLabel() { return "Medium"; }
+}

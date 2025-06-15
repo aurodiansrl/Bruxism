@@ -1,0 +1,18 @@
+package model;
+import java.util.Map;
+
+public class RiskProfile {
+    private Map<String, Double> riskScores;
+
+    public Map<String, Double> getRiskScores() {
+        return riskScores;
+    }
+
+    public void setRedFlags(Map<String, String> flags) {
+        // Dummy setter
+    }
+
+    public String getAfiLevel() {
+        return "Moderate";
+    }
+}

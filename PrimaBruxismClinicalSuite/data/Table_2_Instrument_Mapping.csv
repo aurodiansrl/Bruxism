@@ -1,0 +1,14 @@
+Domain,Instrument Name,Description / Scope,IsCoreDiagnostic
+muscular,Electromyography (EMG),"Surface EMG for masseter/temporalis during wake/sleep",true
+muscular,Muscle Palpation Test,"Examiner palpation with VAS evaluation",true
+muscular,Mandibular Movement Recording,"Measures jaw mobility and deviations",false
+articular,MRI TMJ,"Soft tissue TMJ disc assessment",true
+articular,CBCT TMJ,"Bone structure assessment of condyle/fossa",true
+articular,Joint Sound Analysis,"Auscultation or digital auscultation",false
+occlusal,Occlusal Contact Analysis,"Analysis of static/dynamic occlusion",true
+occlusal,T-Scan,"Computerized occlusal timing and force distribution",false
+occlusal,BruxChecker,"Night guard for occlusal wear pattern detection",false
+psychological,GAD-7,"Generalized Anxiety Disorder scale",true
+psychological,PHQ-9,"Depression screening",true
+psychological,PSQI,"Pittsburgh Sleep Quality Index",false
+psychological,PSS,"Perceived Stress Scale",false

@@ -1,0 +1,8 @@
+package util;
+
+public class LocalizationManager {
+
+    public String getLabel(String key, String language) {
+        return key + " (translated in " + language + ")";
+    }
+}

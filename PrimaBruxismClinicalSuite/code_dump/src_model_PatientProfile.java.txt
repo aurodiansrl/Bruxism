@@ -1,0 +1,33 @@
+package model;
+
+public class PatientProfile {
+    private int id;
+    private String name;
+    private double[] data;
+
+    public PatientProfile(int id, String name, double... data) {
+        this.id = id;
+        this.name = name;
+        this.data = data;
+    }
+
+    public String getFullName() {
+        return name;
+    }
+
+    public double[] getData() {
+        return data;
+    }
+
+    public Object getActiveAFICategories() {
+        return new Object[0];
+    }
+
+    public Object getTreatmentPlan() {
+        return null;
+    }
+
+    public void setAttribute(String key, String value) {
+        // mock implementation
+    }
+}

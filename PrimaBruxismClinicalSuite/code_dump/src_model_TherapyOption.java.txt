@@ -1,0 +1,11 @@
+package model;
+
+public class TherapyOption {
+    public String domain;
+    public String therapy;
+
+    public TherapyOption(String domain, String therapy) {
+        this.domain = domain;
+        this.therapy = therapy;
+    }
+}

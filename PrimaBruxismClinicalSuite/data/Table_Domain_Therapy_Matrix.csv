@@ -1,0 +1,9 @@
+Domain,FTS Level,Therapy Code,Therapy Name,Description,Level
+Muscular,Probable,MUSC_T1,Biofeedback EMG Training,Training per rilassamento muscolare mirato,Primary
+Muscular,Possible,MUSC_T2,Manual Therapy,Terapie manuali locali (massoterapia, stretching),Secondary
+Articular,Probable,ART_T1,Occlusal Splint (Hard),Bite plane rigido personalizzato,Primary
+Articular,Possible,ART_T2,Mobilization Techniques,Tecniche fisioterapiche di mobilizzazione articolare,Secondary
+Occlusal,Probable,OCCL_T1,Occlusal Adjustment,Riarmonizzazione occlusale mediante molaggio selettivo,Primary
+Occlusal,Possible,OCCL_T2,Night Guard (Soft),Placca notturna morbida,Secondary
+Psychological,Probable,PSYC_T1,CBT (Cognitive Behavioral Therapy),Psicoterapia strutturata per gestione ansia/stress,Primary
+Psychological,Possible,PSYC_T2,Stress Management Training,Tecniche educative (respiro, journaling, meditazione),Secondary

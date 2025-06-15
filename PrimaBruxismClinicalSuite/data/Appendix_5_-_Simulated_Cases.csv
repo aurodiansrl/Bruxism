@@ -1,0 +1,4 @@
+Case ID;Muscular FTS;Articular FTS;Occlusal FTS;Psychological FTS;Diagnosis;Suggested Therapy
+Sim1;28;15;10;5;Muscular + Articular;Physio + Splint
+Sim2;10;25;30;20;Articular + Occlusal;Splint + Ortho
+Sim3;20;35;18;35;Psychological Dominance;CBT + Physio

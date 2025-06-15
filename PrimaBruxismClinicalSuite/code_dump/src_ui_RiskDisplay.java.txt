@@ -1,0 +1,7 @@
+package ui;
+
+public class RiskDisplay {
+    public static void showRiskProfile(Object risk) {
+        System.out.println("Displaying risk profile...");
+    }
+}

@@ -1,0 +1,5 @@
+Domain;Threshold Score;Core Diagnostic Minimum (%);Logic Applied
+Muscular;13;60;TotScore >= 13 AND CoreScore >= 60%
+Articular;11;60;TotScore >= 11 AND CoreScore >= 60%
+Occlusal;10;60;TotScore >= 10 AND CoreScore >= 60%
+Psychological;12;60;TotScore >= 12 AND CoreScore >= 60%

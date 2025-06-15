@@ -1,0 +1,8 @@
+package ui;
+
+public class DashboardRenderer {
+
+    public void render() {
+        System.out.println("Rendering clinical dashboard...");
+    }
+}
